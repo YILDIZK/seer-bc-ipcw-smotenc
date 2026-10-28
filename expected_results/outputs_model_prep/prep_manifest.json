@@ -1,0 +1,43 @@
+{
+  "source_notebook": "seer_breast_2010-2017_model-prep.ipynb",
+  "input": {
+    "model_df.csv": "0ea174fbfa5079444ce0073ebb2e18c1dd590f8bdf23eae9d7e93014c51156b8"
+  },
+  "sha256": {
+    "cohort.parquet": "8c0ebf97420a1a7ff84de7f9c9da1502e2d74ef2bbb9aa96d16de27b05ec37bd",
+    "labels.parquet": "e353602be11fb88dd37c9f8c2982e1dcd014c4d365158fd68831b72e33cb90c6",
+    "folds.parquet": "11f8f66cd6632ef5cd19cfd7d945e771e96663f0eb9c681cb3ba86ddfbdd4d53",
+    "design_transformer.joblib": "ece175f577eb2e324ac7649889fb6b18eae6cc5da29096b1c3f1d1986f041e50",
+    "transformer_spec.json": "936be969c94c10ea497302f188d74b3c0f73d2e0cf5d4faf285b8001fd31caf1",
+    "table_S1_harmonization.csv": "9898a89ab1a9c0621cbc74bd149d3cab976f3bab5395e6b3ab697b1757232283"
+  },
+  "n_patients": 257462,
+  "horizons_months": [
+    36,
+    60,
+    120
+  ],
+  "seed": 42,
+  "cv": {
+    "n_repeats": 3,
+    "n_folds": 5,
+    "inner_val_frac": 0.2,
+    "strata": "status x floor(V / 24)",
+    "outer_train": "inner_role != 'test'"
+  },
+  "labels": {
+    "y": {
+      "bc_death": 1,
+      "competing_death": 0,
+      "known_alive": 0,
+      "indeterminate": -1
+    },
+    "competing_deaths": "Y = 0 in all cells"
+  },
+  "censoring_model": {
+    "event": "status == 0 (loss to follow-up / administrative end); both death types censored",
+    "covariates": "design matrix X (78 columns from the 28 predictors; encoder fitted on outer-train); year_dx not used (positivity at 120 months)",
+    "weight_convention": "left limit G(t-): evaluate at t - 0.5 for integer months; deaths before censorings at ties",
+    "fit_on": "outer-train only"
+  }
+}

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article and this version of the code."
+title: "Code for: Censoring adjustment and synthetic oversampling in fixed-horizon risk prediction: a factorial study using SEER breast cancer data"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Karadayı
+    given-names: Yıldız
+    orcid: "https://orcid.org/0000-0002-5064-634X"
+    affiliation: "Department of Computer Engineering, Faculty of Engineering and Natural Sciences, Istanbul Topkapi University, Istanbul, Türkiye"
+repository-code: "https://github.com/YILDIZK/seer-bc-ipcw-smotenc"

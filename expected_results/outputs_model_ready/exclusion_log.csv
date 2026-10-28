@@ -1,0 +1,16 @@
+step,rows_before,rows_excluded,rows_after
+Study period: diagnosis year 2010-2017,392728,0,392728
+Exclude death-certificate-only and autopsy-only cases,392728,57,392671
+Restrict to one primary only,392671,59902,332769
+Exclude missing demographic information,332769,19095,313674
+"Exclude unknown/borderline ER, PR, or HER2 status",313674,22498,291176
+Exclude unknown laterality and bilateral breast cancer,291176,677,290499
+Exclude unspecified TNM stage,290499,7686,282813
+"Exclude in situ presentations (Tis / stage 0, no invasive tumor)",282813,174,282639
+Tumor size: all records retained; special codes recoded to NaN + descriptive category,282639,0,282639
+Exclude unknown metastatic-site values,282639,1521,281118
+Axillary node status: all records retained; unknown/procedure codes recoded to NaN + descriptive category,281118,0,281118
+Treatment uncertainty retained as flags; optional exclusion not applied,281118,0,281118
+Exclude unknown histologic grade and type,281118,18442,262676
+Exclude deaths with missing/unknown cause of death,262676,1265,261411
+Exclude incomplete follow-up (unknown or zero survival time),261411,3949,257462

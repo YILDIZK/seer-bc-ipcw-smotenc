@@ -1,0 +1,13 @@
+# SEER data and everything derived from it must never be committed (SEER Research Data Use Agreement)
+data/
+work/
+work_*/
+executed_notebooks/
+synthetic/*.csv
+*.parquet
+*.joblib
+
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

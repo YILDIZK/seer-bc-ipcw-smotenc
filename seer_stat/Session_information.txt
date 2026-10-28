@@ -1,0 +1,202 @@
+Filename:  
+SEER*Stat Version:  9.0.43.0
+Date:  September 1, 2026
+
+Session Type:                                         Case Listing
+
+SUGGESTED CITATION
+Software:                                             Surveillance Research Program, National Cancer Institute SEER*Stat software (www.seer.cancer.gov/seerstat) version 9.0.43.0.
+Data:                                                 Surveillance, Epidemiology, and End Results (SEER) Program (www.seer.cancer.gov) SEER*Stat Database: Incidence - SEER Research Data, 17 Registries, Nov 2025 Sub (2000-2023) - Linked To County Attributes - Time Dependent (1990-2024) Income/Rurality, 1969-2024 Counties, National Cancer Institute, DCCPS, Surveillance Research Program, released April 2026, based on the November 2025 submission.
+
+DATA
+Database:                                             Incidence - SEER Research Data, 17 Registries, Nov 2025 Sub (2000-2023) - Linked To County Attributes - Time Dependent (1990-2024) Income/Rurality, 1969-2024 Counties
+Database ID:                                          2636
+Link Database ID:                                     2693
+Use Summary Files:                                    No
+
+SELECTION
+Select Only:                                          Malignant Behavior, Known Age
+Case:                                                  {Age at Diagnosis.Age recode with <1 year olds and 90+} = '20-24 years','25-29 years','30-34 years','35-39 years','40-44 years','45-49 years','50-54 years','55-59 years','60-64 years','65-69 years','70-74 years','75-79 years','80-84 years','85-89 years','90+ years'
+                                                      AND {Race, Sex, Year Dx.Sex} = '  Female'
+                                                      AND {Race, Sex, Year Dx.Year of diagnosis} = '2010','2011','2012','2013','2014','2015','2016','2017'
+                                                      AND {Site and Morphology.Site recode ICD-O-3/WHO 2008} = '  Breast'
+                                                      AND {Site and Morphology.Behavior code ICD-O-3} = 'Malignant'
+                                                      AND {Site and Morphology.Primary Site - labeled} = 'C50.0-Nipple','C50.1-Central portion of breast','C50.2-Upper-inner quadrant of breast','C50.3-Lower-inner quadrant of breast','C50.4-Upper-outer quadrant of breast','C50.5-Lower-outer quadrant of breast','C50.6-Axillary tail of breast','C50.8-Overlapping lesion of breast','C50.9-Breast, NOS'
+                                                      AND {Site and Morphology.Diagnostic Confirmation} = 'Microscopically confirmed','  Positive histology','  Positive exfoliative cytology, no positive histology','  Pos hist AND immunophenotyping AND/OR pos genetic studies','  Positive microscopic confirm, method not specified'
+                                                      AND {Multiple Primary Fields.Sequence number} = 'One primary only','1st of 2 or more primaries'
+
+OUTPUT
+Title:                                                November 2025 Submission with new fields for competing risk analysis.
+
+TABLE
+Column:                                               Age recode with <1 year olds and 90+
+                                                      Age recode with single ages and 90+
+                                                      Patient ID
+                                                      Sequence number
+                                                      Type of Reporting Source
+                                                      Total number of in situ/malignant tumors for patient
+                                                      Race and origin recode (NHW, NHB, NHAIAN, NHAPI, Hispanic)
+                                                      Marital status at diagnosis
+                                                      Year of diagnosis
+                                                      Median household income inflation adj to 2024
+                                                      Rural-Urban Continuum Code
+                                                      Histologic Type ICD-O-3
+                                                      Histology recode - broad groupings
+                                                      ICD-O-3 Hist/behav, malignant
+                                                      Grade Recode (thru 2017)
+                                                      Laterality
+                                                      Primary Site
+                                                      Primary Site - labeled
+                                                      Diagnostic Confirmation
+                                                      Tumor Size Over Time Recode (1988+)
+                                                      Regional nodes examined (1988+)
+                                                      Regional nodes positive (1988+)
+                                                      LN Positive Axillary Level I-II Recode (2010+)
+                                                      Derived AJCC Stage Group, 7th ed (2010-2015)
+                                                      Derived AJCC T, 7th ed (2010-2015)
+                                                      Derived AJCC N, 7th ed (2010-2015)
+                                                      Derived AJCC M, 7th ed (2010-2015)
+                                                      7th Edition Stage Group Recode (2016-2017)
+                                                      Derived SEER Cmb Stg Grp (2016-2017)
+                                                      Derived SEER Combined T (2016-2017)
+                                                      Derived SEER Combined N (2016-2017)
+                                                      Derived SEER Combined M (2016-2017)
+                                                      Derived SEER Combined T Src (2016-2017)
+                                                      Derived SEER Combined N Src (2016-2017)
+                                                      Derived SEER Combined M Src (2016-2017)
+                                                      SEER Combined Mets at DX-bone (2010+)
+                                                      SEER Combined Mets at DX-brain (2010+)
+                                                      SEER Combined Mets at DX-liver (2010+)
+                                                      SEER Combined Mets at DX-lung (2010+)
+                                                      Breast Subtype (2010+)
+                                                      ER Status Recode Breast Cancer (1990+)
+                                                      PR Status Recode Breast Cancer (1990+)
+                                                      Derived HER2 Recode (2010+)
+                                                      CS site-specific factor 1 (2004-2017 varying by schema)
+                                                      CS site-specific factor 2 (2004-2017 varying by schema)
+                                                      CS site-specific factor 3 (2004-2017 varying by schema)
+                                                      CS site-specific factor 4 (2004-2017 varying by schema)
+                                                      CS site-specific factor 5 (2004-2017 varying by schema)
+                                                      CS site-specific factor 6 (2004-2017 varying by schema)
+                                                      Adjusted CS site-specific factor 7 (2004-2017 varying by schema)
+                                                      CS site-specific factor 15 (2004-2017 varying by schema)
+                                                      RX Summ--Surg Prim Site (1998-2022)
+                                                      RX Summ--Surg/Rad Seq
+                                                      Radiation recode
+                                                      Chemotherapy recode (yes, no/unk)
+                                                      RX Summ--Systemic/Sur Seq (2007+)
+                                                      Time from diagnosis to treatment in days recode
+                                                      SEER cause-specific death classification
+                                                      SEER other cause of death classification
+                                                      Survival months
+                                                      Survival Days
+                                                      Survival months flag
+                                                      Vital status recode (study cutoff used)
+                                                      Year of follow-up recode
+                                                      COD to site recode ICD-O-3 2023 Revision Expanded (1999+)
+
+PROPERTIES
+Database                                              Incidence - SEER Research Data, 17 Registries, Nov 2025 Sub (2000-2023)
+Statistic                                             Case Listing
+Row Count                                             392,728
+Creation Time                                         38.00 seconds
+Submitted                                             Tuesday, September 01, 2026 10:29 PM
+Information                                           
+    Number of Input Records Read                      10,944,803
+                                                      
+                                                      Number         Number         
+                                                      Selected       Excluded       Statement      
+                                                      ----------     ----------     ------------------------------------------
+                                                                                    User Selection (Case)
+                                                      10,832,336     112,467         {Age recode with <1 year olds and 90+} = '20-24 years','25-29 years','30-34 years','35-39 
+                                                                                    years','40-44 years','45-49 years','50-54 years','55-59 years','60-64 years','65-69 years',
+                                                                                    '70-74 years','75-79 years','80-84 years','85-89 years','90+ years'
+                                                      5,505,608      5,326,728       {Sex} = '  Female'
+                                                      1,912,441      3,593,167       {Year of diagnosis} = '2010','2011','2012','2013','2014','2015','2016','2017'
+                                                      606,347        1,306,094       {Site recode ICD-O-3/WHO 2008} = '  Breast'
+                                                      489,518        116,829         {Behavior code ICD-O-3} = 'Malignant'
+                                                      489,518        0               {Primary Site - labeled} = 'C50.0-Nipple','C50.1-Central portion of breast',
+                                                                                    'C50.2-Upper-inner quadrant of breast','C50.3-Lower-inner quadrant of breast',
+                                                                                    'C50.4-Upper-outer quadrant of breast','C50.5-Lower-outer quadrant of breast',
+                                                                                    ...  (see Session Printout)
+                                                      484,111        5,407           {Diagnostic Confirmation} = 'Microscopically confirmed','  Positive histology','  
+                                                                                    Positive exfoliative cytology, no positive histology','  Pos hist AND immunophenotyping 
+                                                                                    AND/OR pos genetic studies','  Positive microscopic confirm, method not specified'
+                                                      392,728        91,383          {Sequence number} = 'One primary only','1st of 2 or more primaries'
+                                                                                    Standard Exclusions
+                                                      392,728        0              Select only malignant cancers
+                                                      392,728        0              Select only known age
+                                                      
+    Number of Case Records Used For Analysis          392,728
+                                                      
+                                                      
+                                                      Column:        Age recode with <1 year olds and 90+
+                                                                     Age recode with single ages and 90+
+                                                                     Patient ID     
+                                                                     Sequence number
+                                                                     Type of Reporting Source
+                                                                     Total number of in situ/malignant tumors for patient
+                                                                     Race and origin recode (NHW, NHB, NHAIAN, NHAPI, Hispanic)
+                                                                     Marital status at diagnosis
+                                                                     Year of diagnosis
+                                                                     Median household income inflation adj to 2024
+                                                                     Rural-Urban Continuum Code
+                                                                     Histologic Type ICD-O-3
+                                                                     Histology recode - broad groupings
+                                                                     ICD-O-3 Hist/behav, malignant
+                                                                     Grade Recode (thru 2017)
+                                                                     Laterality     
+                                                                     Primary Site   
+                                                                     Primary Site - labeled
+                                                                     Diagnostic Confirmation
+                                                                     Tumor Size Over Time Recode (1988+)
+                                                                     Regional nodes examined (1988+)
+                                                                     Regional nodes positive (1988+)
+                                                                     LN Positive Axillary Level I-II Recode (2010+)
+                                                                     Derived AJCC Stage Group, 7th ed (2010-2015)
+                                                                     Derived AJCC T, 7th ed (2010-2015)
+                                                                     Derived AJCC N, 7th ed (2010-2015)
+                                                                     Derived AJCC M, 7th ed (2010-2015)
+                                                                     7th Edition Stage Group Recode (2016-2017)
+                                                                     Derived SEER Cmb Stg Grp (2016-2017)
+                                                                     Derived SEER Combined T (2016-2017)
+                                                                     Derived SEER Combined N (2016-2017)
+                                                                     Derived SEER Combined M (2016-2017)
+                                                                     Derived SEER Combined T Src (2016-2017)
+                                                                     Derived SEER Combined N Src (2016-2017)
+                                                                     Derived SEER Combined M Src (2016-2017)
+                                                                     SEER Combined Mets at DX-bone (2010+)
+                                                                     SEER Combined Mets at DX-brain (2010+)
+                                                                     SEER Combined Mets at DX-liver (2010+)
+                                                                     SEER Combined Mets at DX-lung (2010+)
+                                                                     Breast Subtype (2010+)
+                                                                     ER Status Recode Breast Cancer (1990+)
+                                                                     PR Status Recode Breast Cancer (1990+)
+                                                                     Derived HER2 Recode (2010+)
+                                                                     CS site-specific factor 1 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 2 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 3 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 4 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 5 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 6 (2004-2017 varying by schema)
+                                                                     Adjusted CS site-specific factor 7 (2004-2017 varying by schema)
+                                                                     CS site-specific factor 15 (2004-2017 varying by schema)
+                                                                     RX Summ--Surg Prim Site (1998-2022)
+                                                                     RX Summ--Surg/Rad Seq
+                                                                     Radiation recode
+                                                                     Chemotherapy recode (yes, no/unk)
+                                                                     RX Summ--Systemic/Sur Seq (2007+)
+                                                                     Time from diagnosis to treatment in days recode
+                                                                     SEER cause-specific death classification
+                                                                     SEER other cause of death classification
+                                                                     Survival months
+                                                                     Survival Days  
+                                                                     Survival months flag
+                                                                     Vital status recode (study cutoff used)
+                                                                     Year of follow-up recode
+                                                                     COD to site recode ICD-O-3 2023 Revision Expanded (1999+)
+                                                      
+                                                      Sort:          Not Sorted     
+                                                      
+                                                      
+                                                      

@@ -1,0 +1,62 @@
+Comparison of a complete re-run from the SEER extract (28 October 2026) with expected_results/,
+produced by: python compare_with_expected.py   (working folder path removed)
+
+Working folder: <local working folder>
+Tolerance: 1e-09
+
+checksum model_df.csv                 identical
+checksum cohort.parquet               identical
+checksum labels.parquet               identical
+checksum folds.parquet                identical
+checksum design_transformer.joblib    identical
+checksum transformer_spec.json        identical
+checksum table_S1_harmonization.csv   identical
+
+ok   outputs_bootstrap_control/bootstrap_control_contrasts.csv                   largest difference 0.00e+00
+ok   outputs_bootstrap_control/bootstrap_control_metrics_by_split.csv            largest difference 0.00e+00
+ok   outputs_bootstrap_control/bootstrap_control_summary.csv                     largest difference 0.00e+00
+ok   outputs_decile_check/decile_check_summary.csv                               largest difference 0.00e+00
+ok   outputs_decile_check/decile_points_by_repeat.csv                            largest difference 0.00e+00
+ok   outputs_decile_check/decile_points_mean.csv                                 largest difference 0.00e+00
+info outputs_descriptive/compute_times_by_cell.csv                               largest difference 3.10e+00 (fit_s) (fitting times, not compared)
+info outputs_descriptive/compute_times_per_split.csv                             largest difference 4.03e+02 (total_s) (fitting times, not compared)
+ok   outputs_descriptive/early_deaths.csv                                        largest difference 0.00e+00
+ok   outputs_descriptive/followup_support_by_year.csv                            largest difference 0.00e+00
+ok   outputs_descriptive/threshold_common_rule_by_split.csv                      largest difference 0.00e+00
+ok   outputs_descriptive/threshold_common_rule_summary.csv                       largest difference 0.00e+00
+ok   outputs_evaluation/metrics_10y_diagnosed_2010_2013_by_split.csv             largest difference 0.00e+00
+ok   outputs_evaluation/metrics_by_split.csv                                     largest difference 0.00e+00
+ok   outputs_evaluation/metrics_cutoff_0.5_by_split.csv                          largest difference 0.00e+00
+ok   outputs_evaluation/metrics_ppv_matched_sensitivity_by_split.csv             largest difference 0.00e+00
+ok   outputs_evaluation/metrics_sensitivity_truncation_oe_by_split.csv           largest difference 0.00e+00
+ok   outputs_evaluation/table_RQ_contrasts.csv                                   largest difference 0.00e+00
+ok   outputs_evaluation/table_RQ_ppv80_netbenefit.csv                            largest difference 0.00e+00
+ok   outputs_evaluation/table_S16_10y_diagnosed_2010_2013.csv                    largest difference 0.00e+00
+ok   outputs_evaluation/table_S2_weights.csv                                     largest difference 0.00e+00
+ok   outputs_evaluation/table_S4_cutoff_0.5.csv                                  largest difference 0.00e+00
+ok   outputs_evaluation/table_S5_smote_operating_point.csv                       largest difference 0.00e+00
+ok   outputs_evaluation/table_S6_ppv_matched_sensitivity.csv                     largest difference 0.00e+00
+ok   outputs_evaluation/table_sensitivity_truncation_oe.csv                      largest difference 0.00e+00
+ok   outputs_evaluation/table_sensitivity_untruncated_brier.csv                  largest difference 0.00e+00
+ok   outputs_evaluation/table_T2_cells.csv                                       largest difference 0.00e+00
+ok   outputs_evaluation/table_T3_results_36m.csv                                 largest difference 0.00e+00
+ok   outputs_evaluation/table_T4_results_60m.csv                                 largest difference 0.00e+00
+ok   outputs_evaluation/table_T5_results_120m.csv                                largest difference 0.00e+00
+ok   outputs_evaluation/table_T6_references.csv                                  largest difference 0.00e+00
+ok   outputs_evaluation/table_T7_factorial.csv                                   largest difference 0.00e+00
+ok   outputs_evaluation/table_T8_threshold.csv                                   largest difference 0.00e+00
+ok   outputs_model_ready/exclusion_log.csv                                       largest difference 0.00e+00
+ok   outputs_model_ready/table_S3_cif_vs_net.csv                                 largest difference 0.00e+00
+ok   outputs_model_ready/table_T1_by_horizon.csv                                 largest difference 0.00e+00
+ok   outputs_recalibration/exploratory_censoring_contrasts_after_recalibration.csv largest difference 4.81e-12 (t)
+ok   outputs_recalibration/recalibration_contrasts.csv                           largest difference 0.00e+00
+ok   outputs_recalibration/recalibration_metrics_by_split.csv                    largest difference 0.00e+00
+ok   outputs_recalibration/recalibration_summary.csv                             largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/crosscheck_contrasts.csv                         largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/crosscheck_metrics_by_split.csv                  largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/crosscheck_summary.csv                           largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/tiebreak_contrasts.csv                           largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/tiebreak_metrics_by_split.csv                    largest difference 0.00e+00
+ok   outputs_smotenc_crosscheck/tiebreak_reference_level_shares.csv              largest difference 0.00e+00
+
+Checksums: all identical; tables: 44 of 44 within tolerance (plus 2 timing files for information)

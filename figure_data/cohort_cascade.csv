@@ -1,0 +1,15 @@
+step,criterion,excluded,remaining
+0,"Malignant breast tumors, women >=20 y, 2010-2017",,489518
+1,Microscopically confirmed,5407,484111
+2,First primary tumor per patient,91383,392728
+3,Reporting source other than autopsy only,57,392671
+4,One primary only,59902,332769
+5,Race/ethnicity and marital status known,19095,313674
+6,"ER, PR and HER2 status known (positive/negative)",22498,291176
+7,"Laterality known, unilateral",677,290499
+8,"AJCC 7th edition T, N, M and stage group known",7686,282813
+9,Invasive tumor (not Tis / stage 0),174,282639
+10,Metastatic-site status known,1521,281118
+11,Histologic grade and type known,18442,262676
+12,Cause of death known (deaths),1265,261411
+13,"Complete, positive survival time",3949,257462

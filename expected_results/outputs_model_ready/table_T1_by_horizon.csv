@@ -1,0 +1,4 @@
+horizon_months,n_total,n_determinable,bc_deaths,other_cause_deaths,censored_before_tau,at_risk_at_tau,IR_zero,IR_discard_ipcw
+36,257462,254362,14185,7076,3100,233705,17.15,16.93
+60,257462,252447,21515,12761,5015,218698,10.97,10.73
+120,257462,137662,29674,25199,119800,82957,7.68,3.64
